@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace AustinHeap\Database\Encryption\Console\Commands;
+namespace Involix\Database\Encryption\Console\Commands;
 
 use Exception;
 use RuntimeException;
