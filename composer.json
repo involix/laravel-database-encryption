@@ -1,5 +1,5 @@
 {
-    "name": "austinheap/laravel-database-encryption",
+    "name": "involix/laravel-database-encryption",
     "description": "A package for automatically encrypting and decrypting Eloquent attributes in Laravel 5.5+, based on configuration settings.",
     "keywords": [
         "laravel",
@@ -59,7 +59,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AustinHeap\\Database\\Encryption\\": "src"
+            "Involix\\Database\\Encryption\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -69,10 +69,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AustinHeap\\Database\\Encryption\\EncryptionServiceProvider"
+                "Involix\\Database\\Encryption\\EncryptionServiceProvider"
             ],
             "aliases": {
-                "DatabaseEncryption": "AustinHeap\\Database\\Encryption\\EncryptionFacade"
+                "DatabaseEncryption": "Involix\\Database\\Encryption\\EncryptionFacade"
             }
         }
     }
