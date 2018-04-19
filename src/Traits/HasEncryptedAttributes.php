@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace AustinHeap\Database\Encryption\Traits;
+namespace Involix\Database\Encryption\Traits;
 
 use Log;
 use Crypt;
@@ -184,7 +184,9 @@ trait HasEncryptedAttributes
     {
         if ($this->shouldEncrypt($key) && ! $this->isEncrypted($this->attributes[$key])) {
             try {
-                $this->attributes[$key] = $this->encryptedAttribute($this->attributes[$key]);
+                if ( $this->attributes[$key] != null ) {
+                    $this->attributes[$key] = $this->encryptedAttribute($this->attributes[$key]);
+                }
             } catch (EncryptException $exception) {
                 $this->setLastEncryptionException($exception, __FUNCTION__);
             }
